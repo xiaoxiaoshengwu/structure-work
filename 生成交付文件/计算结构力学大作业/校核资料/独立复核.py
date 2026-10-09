@@ -22,7 +22,7 @@ for label in ['必做题','选做题']:
  cu=np.array([[float(x) for x in r.split()[1:3]] for r in nr]).ravel(); cn=np.array([float(r.split()[4]) for r in er]); np.testing.assert_allclose(cu,u,rtol=1e-10,atol=1e-14); np.testing.assert_allclose(cn,N,rtol=1e-10,atol=1e-10)
  # Analytical/manual result via algebraic equations.
  if label=='必做题':
-  EA=4.8e6; l=h=1.; a=l/2;b=l/(2*np.sqrt(3)); d=h-b;L=np.hypot(a,h);c=a/L;s=h/L;ko=EA/L;ki=EA/(l/np.sqrt(3));kv=EA/d;Px=20+100/np.sqrt(2);Py=-100/np.sqrt(2);D=(ki/2+kv)*(2*ko*s*s+kv)-kv*kv
+  EA=4.8e6; l=1.; h=np.sqrt(3)/2; a=l/2;b=l/(2*np.sqrt(3)); d=h-b;L=np.hypot(a,h);c=a/L;s=h/L;ko=EA/L;ki=EA/(l/np.sqrt(3));kv=EA/d;Px=20+100/np.sqrt(2);Py=-100/np.sqrt(2);D=(ki/2+kv)*(2*ko*s*s+kv)-kv*kv
   um=np.array([0,0,0,0,0,kv*Py/D,Px/(2*ko*c*c),(ki/2+kv)*Py/D]);nm=np.array([ko*(c*um[6]+s*um[7]),kv*(um[7]-um[5]),ko*(-c*um[6]+s*um[7]),ki*um[5]/2,ki*um[5]/2,0])
  else:
   R3=(30*2+50*6+15*1.5)/8;R1=80-R3; nm=np.zeros(7);nm[2]=-R1/.6;nm[0]=15-.8*nm[2];nm[5]=-R3/.6;nm[1]=-.8*nm[5];nm[3]=-50-nm[2];nm[4]=-nm[3];nm[6]=.8*(nm[2]-nm[3]); dl=nm*np.array(lengths)/200000

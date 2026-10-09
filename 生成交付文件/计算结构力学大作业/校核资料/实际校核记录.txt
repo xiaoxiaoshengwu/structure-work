@@ -5,9 +5,8 @@ PASS: prescribed support displacement: u20x=0.0011 m, N100=10 kN.
 PASS: zero_length rejected with exit code 2: ERROR (input line 8): Element length must be finite and positive.
 PASS: nonpositive_E rejected with exit code 2: ERROR (input line 8): E and A must be positive.
 PASS: mechanism rejected with exit code 2: ERROR (input line 8): A free DOF has zero or invalid stiffness.
-PASS: 必做题 all free displacements and all member axial forces agree with independent numpy solve and analytical hand formulas; max displacement difference 2.832e-18 m; max force difference 1.310e-11 kN.
+PASS: 必做题 all free displacements and all member axial forces agree with independent numpy solve and analytical hand formulas; max displacement difference 2.805e-18 m; max force difference 3.742e-11 kN.
 PASS: 选做题 all free displacements and all member axial forces agree with independent numpy solve and analytical hand formulas; max displacement difference 3.348e-16 m; max force difference 3.340e-12 kN.
 Windows executable: copied from uploaded repository, SHA-256 identity checked; Windows runtime not tested in this Linux environment.
 
-DOCUMENT PASS: 33-page PDF rendered; all 27 TOC page numbers checked; 27 native editable equations; complete 405-line C appendix exactly matches delivered source; cover identity/date fields blank; template page margins verified.
-SOURCE PASS: preprocessed C identical to uploaded implementation (comment-only additions); uploaded Git checkout remains clean.
+CORRECTION PASS: mandatory triangle outer sides all 1 m, h=sqrt(3)/2; all free displacements, six axial forces and reactions recalculated. 33-page PDF, complete 405-line appendix and 27 TOC page numbers checked.

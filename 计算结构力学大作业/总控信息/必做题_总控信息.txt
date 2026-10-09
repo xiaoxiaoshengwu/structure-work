@@ -1,12 +1,13 @@
-# Required problem: base length l = 1 m; top height h = 1 m.
-# This numerical parameter is supplied by the user, not by the diagram.
+# Mandatory problem: outer equilateral triangle with side length 1 m.
+# l=1 m, h=sqrt(3)/2 m. Inner bars make 30 degrees with base.
+# Units: m, kN; E=2e7 kN/m^2; A=0.24 m^2; tension positive.
 TRUSS2D 1
 NODES 4
 # id x y fix_x fix_y u_x u_y F_x F_y
 1 0 0 1 1 0 0 0 0
 2 1 0 1 1 0 0 0 0
 3 0.5 0.28867513459481292 0 0 0 0 0 0
-4 0.5 1 0 0 0 0 90.710678118654741 -70.710678118654741
+4 0.5 0.8660254037844386 0 0 0 0 90.710678118654741 -70.710678118654741
 ELEMENTS 6
 # id node_i node_j E A
 1 1 4 20000000 0.23999999999999999

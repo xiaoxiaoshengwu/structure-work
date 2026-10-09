@@ -142,7 +142,7 @@ static void read_model(FILE *f, Model *a) {
 }
 /* 必做题：底杆 6 长 l，顶点 4 的高度为 h；节点 3 由两侧 30 度确定。
  * 节点 1、2 的两个方向均固定；100 kN 向右下 45 度，另有向右 20 kN。
- * 图中没有指定 l、h 数值；输入值均为用户参数，不能当作题图已知尺寸。 */
+ * 本次必做题外轮廓为边长1 m的等边三角形，取l=1、h=sqrt(3)/2。 */
 static void required_model(Model *a, double l, double h) {
     const int ends[6][2] = {{0,3},{2,3},{1,3},{0,2},{2,1},{0,1}};
     int i;
